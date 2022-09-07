@@ -3,13 +3,13 @@ kind: Pod
 metadata:
   creationTimestamp: null
   labels:
-    run: busybox
-  name: busybox
+    run: busybox-1
+  name: busybox-1
   namespace: default
 spec:
   containers:
   - image: busybox
-    name: busybox
+    name: busybox-1
     resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Never
