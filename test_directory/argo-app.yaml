@@ -1,0 +1,16 @@
+# https://argoproj.github.io/argo-cd/operator-manual/application.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: congenial-disco
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/zormond/congenial-disco.git 
+    targetRevision: master 
+    path: test_directory/
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+
